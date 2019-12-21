@@ -34,5 +34,6 @@ public:
 	
 	void sortByNum();
 	
+	//Çå¿ÕÅÆ×é
 	void clear();
 };

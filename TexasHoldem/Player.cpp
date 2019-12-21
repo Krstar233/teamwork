@@ -68,11 +68,6 @@ int Player::getMoney()
 	return this->money;
 }
 
-void Player::initHandCard()
-{
-	this->handCard.clear();
-}
-
 void Player::initOut()
 {
 	out = false;
@@ -111,4 +106,9 @@ PokerHeap Player::getHandCard()
 PokerHeap& Player::getCard()
 {
 	return handCard;
+}
+
+void Player::clearHandCard()
+{
+	handCard.clear();
 }

@@ -13,9 +13,6 @@ Desk::~Desk()
 
 void Desk::init()
 {
-	this->betMount = 0;
-	this->jackPot = 0;
-	this->publicPoker.clear();
 }
 
 void Desk::publicPokerSort()
@@ -48,4 +45,9 @@ PokerHeap Desk::getpublicPoker()
 PokerHeap& Desk::getCard()
 {
 	return publicPoker;
+}
+
+void Desk::clearPublicPoker()
+{
+	publicPoker.clear();
 }

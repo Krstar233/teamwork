@@ -21,9 +21,6 @@ Banker::Banker()
 Banker::~Banker()
 {
 	delete [] Rank;
-	delete [] players_cards_type;
-	delete [] finalcards;
-	delete [] subset;
 }
 
 void Banker::licensing(std::vector<Player>& players, PokerHeap & pokerHeap)
@@ -103,8 +100,6 @@ void Banker::distributeReward(std::vector<Player>& players, Desk & desk)
 			for (int k = 0; k < 5; k++)
 			{
 				subset[j][k].show();
-				if (k != 4)
-					cout << " ";
 			}
 		}
 		cout << endl;
@@ -127,6 +122,11 @@ void Banker::distributeReward(std::vector<Player>& players, Desk & desk)
 		}
 		cout << endl;
 	}
+	delete[] finalcards;
+	delete[] subset;
+	delete[] players_cards_type;
+	winners_index.clear();
+	winnernum = 0;
 }
 
 void Banker::identifyCardType(std::vector<Player>& players)

@@ -132,13 +132,15 @@ void TexasHoldemGame::continueGame()
 	cout << "游戏开始" << endl;
 
 	//重置弃牌玩家
-	for (int i = 0; i < players.size(); i++) {
-		players[i].initHandCard();
+	for (int i = 0; i < players.size(); i++)
+	{
 		players[i].initOut();
+		players[i].clearHandCard();
 	}
 
 	//重载桌面(牌局)
 	desk.init();
+	desk.clearPublicPoker();
 
 	//重置牌堆
 	pokerHeap.init();
@@ -204,15 +206,11 @@ void TexasHoldemGame::continueGame()
 	cout << "本回游戏结束" << endl;
 }
 
-void TexasHoldemGame::endGame()
-{
-}
-
 void TexasHoldemGame::GameTest(int playerNum)
 {
 	for (int i = 0; i < playerNum; i++) {
 		Player player;
-		string name = "玩家" + to_string(i+1);
+		string name = "玩家" + to_string(i + 1);
 		player.setName(name);
 		player.setMoney(10000);
 		players.push_back(player);
@@ -223,11 +221,12 @@ void TexasHoldemGame::GameTest(int playerNum)
 
 		//重置弃牌玩家
 		for (int i = 0; i < players.size(); i++) {
-			players[i].initHandCard();
+			players[i].clearHandCard();
 			players[i].initOut();
 		}
 		//重载桌面(牌局)
 		desk.init();
+		desk.clearPublicPoker();
 
 		//重置牌堆
 		pokerHeap.init();
@@ -274,6 +273,10 @@ void TexasHoldemGame::GameTest(int playerNum)
 			cout << "-";
 		cout << endl;
 	}
+}
+
+void TexasHoldemGame::endGame()
+{
 }
 
 TexasHoldemGame::~TexasHoldemGame()

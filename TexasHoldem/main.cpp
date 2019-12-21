@@ -77,5 +77,5 @@ void pokerheapTest()
 void gameTest()
 {
 	TexasHoldemGame game;
-	game.GameTest(5);
+	game.GameTest(3);
 }

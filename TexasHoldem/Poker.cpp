@@ -1,13 +1,10 @@
-Ôªø#include "Poker.h"
+#include "Poker.h"
 
 
 void Poker::show()
 {
-	//string flowerIcons[] = { "Èªë‚ô†Ê°É","Á∫¢‚ô•Ê°É","Ê¢Ö‚ô•Ëä±","Êñπ‚óÜÂùó" };
-	//string flowerIcons[] = { "‚ô†","‚ô•","‚ô£","‚ô¶" };
-	string sizes[] = { "0","A","2","3","4","5","6","7","8","9","10","J","Q","K","A" };
-	//int fl_i = 3 - getFlowerSize();
 	cout << flower;
+	string sizes[] = { "0","A","2","3","4","5","6","7","8","9","10","J","Q","K","A" };
 	cout << sizes[size];
 }
 
@@ -36,7 +33,7 @@ Poker::Poker(string flower, string size)
 
 int Poker::getFlowerSize() const
 {
-	string flowers[] = { "ÈªëÊ°É", "Á∫¢Ê°É", "Ê¢ÖËä±", "ÊñπÂùó" };
+	string flowers[] = { "∫⁄Ã“", "∫ÏÃ“", "√∑ª®", "∑ΩøÈ" };
 	for (int i = 0; i < 4; i++) {
 		if (this->flower == flowers[i])
 			return 3 - i;

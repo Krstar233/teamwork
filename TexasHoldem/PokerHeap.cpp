@@ -99,7 +99,8 @@ void PokerHeap::sortByNum()
 
 void PokerHeap::clear()
 {
-	this->heap.clear();
+	heap.clear();
 }
+
 
 

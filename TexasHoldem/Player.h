@@ -40,8 +40,6 @@ public:
 	//获取自己剩余的注(钱)
 	int getMoney();
 
-	void initHandCard();
-
 	//重置out
 	void initOut();
 
@@ -65,5 +63,8 @@ public:
 
 	//返回手牌的引用
 	PokerHeap& getCard();
+
+	//清空手牌
+	void clearHandCard();
 };
 

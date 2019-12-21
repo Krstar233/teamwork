@@ -43,8 +43,7 @@ public:
 	//½áÊøÓÎÏ·
 	void endGame();
 
-	//ÓÎÏ·²âÊÔ
-	void GameTest(int playerNum);
-
 	~TexasHoldemGame();
+
+	void GameTest(int playernum);
 };

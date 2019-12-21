@@ -7,8 +7,8 @@
 class Desk
 {
 	PokerHeap publicPoker; //公共牌
-	int betMount;//本轮需投注
-	int jackPot;//奖池
+	int betMount;//本轮需投注 
+	int jackPot;//奖池 
 public:
 	Desk();
 	~Desk();
@@ -20,4 +20,5 @@ public:
 	void addJackPot(int num);
 	PokerHeap getpublicPoker();
 	PokerHeap& getCard();
+	void clearPublicPoker();
 };
